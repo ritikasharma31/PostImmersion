@@ -1,0 +1,25 @@
+public class PalindromeChecker {
+
+    public static boolean isPalindrome(int input1) {
+        int original = input1;
+        int reversed = 0;
+
+        while (input1 > 0) {
+            int digit = input1 % 10;
+            reversed = reversed * 10 + digit;
+            input1 /= 10;
+        }
+
+        return original == reversed;
+    }
+
+    public static void main(String[] args) {
+        int input1 = 121; // You can change this to any number for testing
+
+        if (isPalindrome(input1)) {
+            System.out.println(input1 + " is a palindrome.");
+        } else {
+            System.out.println(input1 + " is not a palindrome.");
+        }
+    }
+}
